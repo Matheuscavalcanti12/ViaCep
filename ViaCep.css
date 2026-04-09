@@ -1,0 +1,91 @@
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Arial;
+  background: #0f1318;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+
+
+header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  background: #070c53;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 15px 25px;
+  box-shadow: 0 2px 10px rgba(0,0,0,0.3);
+}
+
+
+.logo {
+  color: #ffffff;
+  font-size: 28px;
+  font-weight: bold;
+}
+
+.github {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  color: #ffffff;
+  font-size: 15px;
+  font-weight: bold;
+  white-space: nowrap; 
+  overflow: visible;  
+}
+
+.github img {
+  width: 22px;
+  height: 22px;
+  filter: invert(1);
+}
+
+
+.box {
+  background: rgb(7, 12, 83);
+  padding: 20px;
+  border-radius: 10px;
+  width: 450px;
+  box-shadow: 0 0 10px rgba(0,0,0,0.1);
+  margin-top: 90px;
+}
+
+h2 {
+  text-align: center;
+  color:#ffffff;
+}
+
+input, button {
+  width: 100%;
+  padding: 5px;
+  margin-top: 8px;
+  border-radius: 5px;
+  border: 1px solid #ccc;
+}
+
+input[readonly] {
+  background: #eee;
+}
+
+button {
+  background: #26164d;
+  color: white;
+  border: none;
+  cursor: pointer;
+}
+
+button:hover {
+  background: #2b1666;
+}

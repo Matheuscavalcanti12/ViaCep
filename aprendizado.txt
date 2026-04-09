@@ -1,0 +1,51 @@
+O que foi aprendido referente ao uso de api com JS: Sintaxe, referencia de uso de campo input por 
+uso document.getElementByID. Leitura de url de uma API, formato json.
+
+O funcionamento desta chamada de api e resposta em json é criada dentro de uma função.
+
+Formato JSON simples, utilizado também na matéria do Fernando, para a criação da Pokedex, no inicio do curso.
+
+<script> 
+    Primeiro a se pensar: A função vai realizar o funcionamento da API "referenciando" campos de entrada, entao ou seja
+    pra isto funcionar, eu ja tenho que ter um botao, um formaluario, algo pra referenciar com document.getElementByID.
+
+
+    1° criar função:
+     Função ChamarCep(); -> pra chamar a função, será ao click do botao, entao -> botão Onclick = ChamarCep()
+
+    2° Referenciar o campo de entrada de texto, no caso aqui, o campo que recebe cep:
+       var Cep = document.getElementByID("nome do id dado ao campo de entrada que recebe cep")
+
+    3° Uso do fetch:
+    fectch vai recebe a url que utilizaremos, no caso aqui, a url pronta da api do ViaCEP
+
+    fetch("url ......" +variavel que recebe o dado do cep, no caso aqui, variavel Cep+ "/json"  )
+
+    utilizamos a variavel porque para o uso correto da api, o formato dela é utilizado url -> campo que recebe cep
+    -> formato que retorna dados (json)
+
+    4° uso do then:
+    Retorna o formato da api, no caso, json:
+    .then(res => res.json())
+
+    5° retornar dados -> then Data(data è o retorno dos dados, pode ser qualquer nome (d,n,m etc))
+
+    .then(data =>{
+        -> busco todos os campos do formulario por document.getElementByID
+
+        Como estamos no campo de retorno então significa que estou puxando os campos que vou retornar dados
+    })
+
+</script>
+
+Resumo da lógica e aprendizado:
+->Criar campos que irão retornar dados e passar um id para refencialos
+->API criada dentro de função
+->criar variavel que vai trazer os dados principais e referenciar este campo com getElementByID
+-> fetch recebe url ou caminho de endpoint criado(o que nao é o caso aqui) e utilizada a variavel que recebe o dado
+principal do formato da api
+-> then informa formato
+-> then data referencia os campos que vao receber dados.
+
+JS utlizido e funcional.
+

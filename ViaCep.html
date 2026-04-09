@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <title>Consulta de CEP</title>
+  <link href="ViaCep.css" rel="stylesheet" />
+
+
+</head>
+<body>
+
+<header>
+  <div class="logo">Via CEP</div>
+  
+  <div class="github">
+    <img src="https://cdn-icons-png.flaticon.com/512/25/25231.png" alt="GitHub">
+    <span>Matheuscavalcanti12</span>
+  </div>
+</header>
+
+<div class="box">
+  <h2>Consulta CEP</h2>
+
+  
+
+<input id="cep" placeholder="CEP">
+<button onclick="buscar()">Buscar</button><br><br>
+
+<input id="rua" placeholder="Rua"><br>
+<input id="bairro" placeholder="Bairro"><br>
+<input id="cidade" placeholder="Cidade"><br>
+<input id="uf" placeholder="UF"><br>
+
+
+
+<script>
+function buscar() {
+  var cep = document.getElementById("cep").value;
+
+  fetch("https://viacep.com.br/ws/" + cep + "/json/")
+    .then(res => res.json())
+    .then(data => {
+      document.getElementById("rua").value = data.logradouro;
+      document.getElementById("bairro").value = data.bairro;
+      document.getElementById("cidade").value = data.localidade;
+      document.getElementById("uf").value = data.uf;
+    });
+}
+</script>
+
+
+
+</body>
+</html>
